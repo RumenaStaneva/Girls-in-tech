@@ -1,0 +1,99 @@
+/* ------------------------------------------------------------ *\
+Footer
+\* ------------------------------------------------------------ */
+
+.footer {
+    padding: 30px 0;
+    background-color: #FFECEC;
+}
+
+.footer .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer .footer__logo {
+    max-width: 121px
+}
+
+.footer .footer__logo {
+    display: inline-block;
+    width: 100%;
+}
+
+.footer .footer__logo img {
+    width: 100%;
+    margin-bottom: 0;
+    transition: transform .3s;
+}
+
+.footer .footer__logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer .footer__links {
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer__nav {
+    margin-right: 30px;
+}
+
+.footer .footer__nav ul {
+    display: flex;
+}
+
+.footer .footer__nav li+li {
+    margin-left: 33px;
+}
+
+.footer .footer__nav a {
+    font-size: 21px;
+    line-height: 1.24;
+    text-decoration: none;
+    position: relative;
+}
+
+.footer .footer__nav a:hover:after {
+    opacity: 1;
+}
+
+.footer .footer__nav a:after {
+    height: 3px;
+    width: 100%;
+    background-color: #656565;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.socials ul {
+    display: flex;
+}
+
+.socials li {
+    transition: opacity .3s;
+}
+
+.socials li:hover {
+    opacity: .75;
+}
+
+.socials li+li {
+    margin-left: 33px;
+}
+
+.socials img {
+    width: 64px;
+}
+
+.copyright p {
+    font-size: 15px;
+    line-height: 1.2;
+}

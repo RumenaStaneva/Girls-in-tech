@@ -1,0 +1,66 @@
+.form-authentication {
+    padding: 44px 60px;
+    background-color: #FFFEFE;
+}
+
+.form-authentication .form__title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 1.21;
+    margin-bottom: 27px;
+}
+
+.form-authentication .form__head {
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    margin-bottom: 49px;
+}
+
+.form-authentication .form__body {
+    padding: 0 60px;
+    margin-bottom: 68px;
+}
+
+.form-authentication .form__row+.form__row {
+    margin-top: 30px;
+}
+
+.form-authentication .form__label {
+    font-size: 29px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.form-authentication .form__field {
+    border: 3px solid #656565;
+    border-radius: 12px;
+    font-size: 29px;
+    padding: 5px 10px;
+    width: 100%;
+    color: #656565;
+}
+
+.form-authentication .form__btn {
+    background: #FFECEC;
+    border-radius: 10px;
+    font-size: 30px;
+    line-height: 1.23;
+    text-align: center;
+    min-width: 310px;
+    border: none;
+    color: #656565;
+    font-weight: 300;
+    padding: 11px 10px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.form-authentication .form__btn:hover {
+    background-color: #ffcfcf;
+}
+
+.form-authentication .form__actions {
+    display: flex;
+    justify-content: center;
+}

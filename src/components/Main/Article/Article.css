@@ -1,0 +1,41 @@
+.main-container {
+    display: inline-block;
+    width: 83%;
+    height: auto;
+    /* border:1px solid blue; */
+    margin-bottom: 5%;
+}
+
+.main-container h1 {
+    text-align: center;
+    color: #234465;
+    text-decoration: underline;
+    margin-bottom: 2%;
+}
+
+
+.main-container .posts {
+    width: 100%;
+    /* border:1px solid red; */
+    height: 45vh;
+}
+
+.article__actions {
+    display: flex;
+}
+
+.article__actions .btn {
+    background: #FFECEC;
+    border-radius: 10px;
+    font-size: 25px;
+    line-height: 1.23;
+    text-align: center;
+    min-width: 250px;
+    border: none;
+    color: #656565;
+    font-weight: 300;
+    padding: 11px 10px;
+    margin: 10px 10px 10px 0;
+    cursor: pointer;
+    transition: background-color .3s;
+}

@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import LoggedHeader from './components/LoggedHeader'
+import GuestHeader from './components/GuestHeader'
+import Footer from './components/Footer';
+import Main from './components/Main';
+import Error from './components/Error';
+import About from './components/About';
+import Createblog from './components/CreateBlog';
+import Login from './components/Authentication/Login';
+import Register from './components/Authentication/Register';
+//import { AuthProvider } from './services/Auth'
+import React from 'react'
+import { Route, Link, Switch, Router } from 'react-router-dom';
 import './App.css';
+//import PrivateRoute from './services/PrivateRoute';
 
 function App() {
+
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GuestHeader />
+      {/* <PrivateRoute component={LoggedHeader} /> */}
+
+      <Switch>
+        <Route exact path="/" component={Main} />
+
+        <Route path='/about/:name' component={About} />
+        <Route path='/login' component={Login} />
+        <Route path='/register' component={Register} />
+        <Route path='/createBlog' component={Createblog} />
+        <Route render={() => <Error />} />
+      </Switch>
+
+
+      <Footer />
     </div>
+    //</AuthProvider >
+
   );
 }
 
