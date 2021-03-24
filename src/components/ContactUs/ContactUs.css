@@ -1,0 +1,168 @@
+.section-about {
+    padding: 84px 0;
+}
+
+.section-about .section__head {
+    margin-bottom: 104px;
+}
+
+.section-about .section__inner {
+    background-color: #fff;
+    padding: 99px 0;
+}
+
+.section-about .section__title {
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.section-about .section__title h2 {
+    font-weight: 500;
+    font-size: 51px;
+    line-height: 1.21;
+    margin-bottom: 51px;
+}
+
+.section-about .section__image {
+    border-bottom: 1px solid #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.section-about .section__image img {
+    text-align: center;
+    width: 405px;
+    margin-top: -2px;
+}
+
+.section__about .section__actions p {
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 1.23;
+}
+
+.section__about .section__actions a {
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------ *\
+	section-contact
+\* ------------------------------------------------------------ */
+
+.section-contact {
+    padding: 81px 0 44px;
+}
+
+.section-contact .section__inner {
+    background-color: #fff;
+    padding: 38px 51px;
+}
+
+.section-contact .section__head {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 87px;
+}
+
+.section-contact .section__body {
+    margin-bottom: 193px;
+}
+
+.section-contact .section__offer {
+    border-top: 1px solid #000;
+    padding: 37px 0 94px;
+}
+
+.section-contact .section__title-secondary {
+    font-size: 35px;
+    line-height: 1.23;
+    text-align: center;
+    margin-bottom: 59px;
+}
+
+.section-contact .section__offer ul {
+    font-size: 21px;
+    line-height: 1.24;
+}
+
+.section-contact .section__apply {
+    padding: 33px 0;
+    border-top: 1px solid #000;
+}
+
+.section-contact .section__cv {
+    font-size: 28px;
+    line-height: 1.21;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.section-contact .section__email {
+    font-size: 25px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-contact .section__warning {
+    font-size: 21px;
+    line-height: 1.24;
+    text-decoration: underline;
+    color: #000;
+    text-align: center;
+}
+
+.section-contact .section__message {
+    font-size: 28px;
+    line-height: 1.21;
+    text-align: center;
+    margin-bottom: 29px;
+    font-weight: 400;
+}
+
+.section-contact .section__address-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-contact .section__addresses address {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.section-contact .section__addresses {
+    flex: 1;
+}
+
+.section-contact .section__map {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+/* ------------------------------------------------------------ *\
+	Positions
+\* ------------------------------------------------------------ */
+
+.positions .position+.position {
+    margin-top: 94px;
+}
+
+/* ------------------------------------------------------------ *\
+	Position
+\* ------------------------------------------------------------ */
+
+.position .position__title {
+    font-size: 37px;
+    line-height: 1.21;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    margin-bottom: 36px;
+}
+
+.position .position__entry {
+    font-size: 21px;
+    line-height: 1.24;
+}

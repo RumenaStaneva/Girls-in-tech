@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import BlogActions from './BlogActions'
 import { db } from '../../../services/firebase'
 import './Article.css'
-import { Link } from 'react-router-dom';
+import Slider from "react-slick";
+
 
 function Article() {
     const [blogs, setBlogs] = useState([]);
@@ -15,47 +16,67 @@ function Article() {
         fetchData()
     }, [])
 
+    const settings = {
+        dots: true,
+        //lazyLoad: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 2
+
+    }
 
 
     return (
-        <div className="article">
-            {
+        <Slider {...settings}>
+            <div className="article" >
 
-                blogs.map(blog => {
-                    //console.log(blog);
+                {blogs.map(blog => {
+
+                    console.log(blog);
                     return (
                         <div className="article__inner">
+
                             <div className="article__content">
-                                <div className="article__head">
-                                    <a href="/" className="article__logo">
-                                        <img src={logo} alt="Logo" />
-                                    </a>
+
+                                <a href="/" className="article__logo">
+                                    <img src={logo} alt="Logo" />
+                                </a>
+                                <Slider {...settings}>
 
                                     <div className="article__info">
                                         <p>Created at {blog.createdAt}</p>
 
                                         <p>By {blog.author}</p>
                                     </div>
-                                </div>
-
-                                <div className="article__body">
-                                    <h2 className="article__title">{blog.title}</h2>
-
-                                    <div className="article__entry">
-                                        <p>{blog.content}</p>
-                                    </div>
-                                    <BlogActions blog={blog} />
-                                </div>
+                                </Slider>
                             </div>
+
+                            <div className="article__body">
+                                <h2 className="article__title">{blog.title}</h2>
+
+                                <div className="article__entry">
+                                    <p>{blog.content}</p>
+                                </div>
+                                <BlogActions blog={blog} />
+                            </div>
+
 
                             <div className="article__image" style={{
                                 backgroundImage: `url(${blog.imgUrl})`
                             }}></div>
+
                         </div>
+
                     )
-                })
-            }
-        </div>
+
+                })}
+
+
+            </div >
+        </Slider >
+
     )
 
 }

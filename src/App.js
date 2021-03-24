@@ -6,6 +6,7 @@ import Error from './components/Error';
 import About from './components/About';
 import Createblog from './components/CreateBlog';
 import Login from './components/Authentication/Login';
+import ContactUs from './components/ContactUs';
 import Register from './components/Authentication/Register';
 //import { AuthProvider } from './services/Auth'
 import React from 'react'
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/" component={Main} />
 
         <Route path='/about/:name' component={About} />
+        <Route path='/contactUs' component={ContactUs} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
         <Route path='/createBlog' component={Createblog} />
