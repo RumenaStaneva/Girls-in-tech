@@ -18,7 +18,7 @@ function Article() {
 
     const settings = {
         dots: true,
-        //lazyLoad: true,
+        lazyLoad: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -29,53 +29,49 @@ function Article() {
 
 
     return (
-        <Slider {...settings}>
-            <div className="article" >
 
-                {blogs.map(blog => {
+        <div className="article">
+            <Slider {...settings}>
+                <>
+                    {
 
-                    console.log(blog);
-                    return (
-                        <div className="article__inner">
+                        blogs.map(blog => {
+                            //console.log(blog);
+                            return (
+                                <div className="article__inner">
+                                    <div className="article__content">
+                                        <div className="article__head">
+                                            <a href="/" className="article__logo">
+                                                <img src={logo} alt="Logo" />
+                                            </a>
 
-                            <div className="article__content">
+                                            <div className="article__info">
+                                                <p>Created at {blog.createdAt}</p>
 
-                                <a href="/" className="article__logo">
-                                    <img src={logo} alt="Logo" />
-                                </a>
-                                <Slider {...settings}>
+                                                <p>By {blog.author}</p>
+                                            </div>
+                                        </div>
 
-                                    <div className="article__info">
-                                        <p>Created at {blog.createdAt}</p>
+                                        <div className="article__body">
+                                            <h2 className="article__title">{blog.title}</h2>
 
-                                        <p>By {blog.author}</p>
+                                            <div className="article__entry">
+                                                <p>{blog.content}</p>
+                                            </div>
+                                            <BlogActions blog={blog} />
+                                        </div>
                                     </div>
-                                </Slider>
-                            </div>
 
-                            <div className="article__body">
-                                <h2 className="article__title">{blog.title}</h2>
-
-                                <div className="article__entry">
-                                    <p>{blog.content}</p>
+                                    <div className="article__image" style={{
+                                        backgroundImage: `url(${blog.imgUrl})`
+                                    }}></div>
                                 </div>
-                                <BlogActions blog={blog} />
-                            </div>
-
-
-                            <div className="article__image" style={{
-                                backgroundImage: `url(${blog.imgUrl})`
-                            }}></div>
-
-                        </div>
-
-                    )
-
-                })}
-
-
-            </div >
-        </Slider >
+                            )
+                        })
+                    }
+                </>
+            </Slider>
+        </div>
 
     )
 
