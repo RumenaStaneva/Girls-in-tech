@@ -7,46 +7,53 @@ import { app } from './../../../services/firebase'
 
 
 const Register = ({ history }) => {
-    // const handleRegister = useCallback(async event => {
-    //     event.preventDefault();
-    //     let { email, password, repeatPassword } = event.target.elements;
-    //     if (password.length < 6) {
-    //         alert('Password should be at least 6 characters long!');
-    //         email = '';
-    //         password = '';
-    //         repeatPassword = '';
-    //         return;
-    //     }
-    //     if (password !== repeatPassword && password.length >= 6) {
-    //         alert('Passwords are not the same!');
-    //         return;
-    //     }
-    //     if (!email) {
-    //         alert('Please enter your email!');
-    //         return;
-    //     }
-    //     try {
-    //         await app
-    //             .auth()
-    //             .createUserWithEmailAndPassword(email.value, password.value);
-    //         history.push("/");
-    //     } catch (error) {
-    //         alert(error);
-    //     }
+    const handleRegister = useCallback(async event => {
+        event.preventDefault();
+        let { email, password, repeatPassword } = event.target.elements;
+        if (password.length < 6) {
+            alert('Password should be at least 6 characters long!');
+            email = '';
+            password = '';
+            repeatPassword = '';
+            return;
+        }
+        if (password !== repeatPassword && password.length >= 6) {
+            alert('Passwords are not the same!');
+            return;
+        }
+        if (!email) {
+            alert('Please enter your email!');
+            return;
+        }
+        try {
+            await app
+                .auth()
+                .createUserWithEmailAndPassword(email.value, password.value);
+            alert('success')
+            history.push("/login");
+        } catch (error) {
+            alert(error);
+        }
 
 
-    // }, [history]);
+    }, [history]);
     return (
         <section className="section-form">
             <div className="shell">
                 <div className="section__inner">
                     <div className="form-authentication">
-                        <form >
+                        <form onSubmit={handleRegister}>
                             <div className="form__head">
                                 <h2 className="form__title">Register</h2>
                             </div>
 
                             <div className="form__body">
+                                <div className="form__row">
+                                    <label for="name" className="form__label">Name</label>
+
+                                    <input type="name" id="name" name="name" className="form__field"
+                                    />
+                                </div>
                                 <div className="form__row">
                                     <label for="email" className="form__label">Email</label>
 

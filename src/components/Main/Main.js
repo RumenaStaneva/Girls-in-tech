@@ -8,7 +8,7 @@ const Main = () => {
         <div>
             <section className="section-slider">
                 <div className="shell">
-                    <Link key="gosho" to="/about/Gosho"><h1>About the article</h1></Link>
+                    {/* <Link key="gosho" to="/about/Gosho"><h1>About the article</h1></Link> */}
                     <Article />
                 </div>
             </section>
