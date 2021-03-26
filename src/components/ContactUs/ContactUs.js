@@ -4,6 +4,8 @@ import ContactForm from './ContactForm'
 import Jobs from './Jobs'
 
 const ContactUs = () => {
+    React.useEffect(() => { window.scrollTo(0, 0); }, []);
+
     return (
         <>
             <section className="section-contact">

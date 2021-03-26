@@ -15,11 +15,9 @@ const Main = () => {
 
             <section className="section-learn-more">
                 <div className="section__inner">
-                    <p>Want more to read? <a href="/">Visit the archives.</a></p>
+                    <p>Want to be part of our community? <Link to="/createBlog">Write a post.</Link></p>
                 </div>
             </section>
-
-            <Link to="/createBlog"><h1>Create blog</h1></Link>
         </div>
     )
 

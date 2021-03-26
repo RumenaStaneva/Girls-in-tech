@@ -1,0 +1,8 @@
+iframe {
+    border: solid 1px #777;
+}
+
+.calendar {
+    text-align: center;
+    padding: 30px;
+}

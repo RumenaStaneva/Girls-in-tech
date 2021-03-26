@@ -31,46 +31,46 @@ function Article() {
     return (
 
         <div className="article">
-            <Slider {...settings}>
-                <>
-                    {
+            {/* <Slider {...settings}> */}
+            <>
+                {
 
-                        blogs.map(blog => {
-                            //console.log(blog);
-                            return (
-                                <div className="article__inner">
-                                    <div className="article__content">
-                                        <div className="article__head">
-                                            <a href="/" className="article__logo">
-                                                <img src={logo} alt="Logo" />
-                                            </a>
+                    blogs.map(blog => {
+                        //console.log(blog);
+                        return (
+                            <div className="article__inner">
+                                <div className="article__content">
+                                    <div className="article__head">
+                                        <a href="/" className="article__logo">
+                                            <img src={logo} alt="Logo" />
+                                        </a>
 
-                                            <div className="article__info">
-                                                <p>Created at {blog.createdAt}</p>
+                                        <div className="article__info">
+                                            <p>Created at {blog.createdAt}</p>
 
-                                                <p>By {blog.author}</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="article__body">
-                                            <h2 className="article__title">{blog.title}</h2>
-
-                                            <div className="article__entry">
-                                                <p>{blog.content}</p>
-                                            </div>
-                                            <BlogActions blog={blog} />
+                                            <p>By {blog.author}</p>
                                         </div>
                                     </div>
 
-                                    <div className="article__image" style={{
-                                        backgroundImage: `url(${blog.imgUrl})`
-                                    }}></div>
+                                    <div className="article__body">
+                                        <h2 className="article__title">{blog.title}</h2>
+
+                                        <div className="article__entry">
+                                            <p>{blog.content}</p>
+                                        </div>
+                                        <BlogActions blog={blog} />
+                                    </div>
                                 </div>
-                            )
-                        })
-                    }
-                </>
-            </Slider>
+
+                                <div className="article__image" style={{
+                                    backgroundImage: `url(${blog.imgUrl})`
+                                }}></div>
+                            </div>
+                        )
+                    })
+                }
+            </>
+            {/* </Slider> */}
         </div>
 
     )
