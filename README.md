@@ -8,7 +8,7 @@ Blog community supporting all the girls in tech. You can read our posts, learn a
 
 1️. Download the app or clone the repo:
 
-`git clone https://github.com/Iskren1990/event-hosting.git`
+`git clone https://github.com/RumenaStaneva/Girls-in-tech.git`
 
 Note: Port 5000 should not be in use.
 

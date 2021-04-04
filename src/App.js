@@ -7,7 +7,7 @@ import About from './components/About';
 import Createblog from './components/CreateBlog';
 import Login from './components/Authentication/Login';
 import ContactUs from './components/ContactUs';
-import Calendar from './components/Calendar';
+import Events from './components/Events';
 import Register from './components/Authentication/Register';
 //import { AuthProvider } from './services/Auth'
 import React from 'react'
@@ -32,7 +32,7 @@ function App() {
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
         <Route path='/createBlog' component={Createblog} />
-        <Route path='/events' component={Calendar} />
+        <Route path='/events' component={Events} />
         <Route render={() => <Error />} />
       </Switch>
 
