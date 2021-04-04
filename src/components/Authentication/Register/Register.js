@@ -52,24 +52,24 @@ const Register = ({ history }) => {
                                     <label for="name" className="form__label">Name</label>
 
                                     <input type="name" id="name" name="name" className="form__field"
-                                    />
+                                        placeholder="E.g: Pesho Petrov" />
                                 </div>
                                 <div className="form__row">
                                     <label for="email" className="form__label">Email</label>
 
-                                    <input type="email" id="email" name="email" className="form__field" />
+                                    <input type="email" id="email" name="email" className="form__field" placeholder="E.g: pesho123@gmail.com" />
                                 </div>
 
                                 <div className="form__row">
                                     <label for="password" className="form__label">Password</label>
 
-                                    <input type="password" id="password" name="password" className="form__field" />
+                                    <input type="password" id="password" name="password" className="form__field" placeholder="Your password" />
                                 </div>
 
                                 <div className="form__row">
                                     <label for="repeatPassword" className="form__label">Repeat Password</label>
 
-                                    <input type="password" id="repeatPassword" name="repeatPassword" className="form__field" />
+                                    <input type="password" id="repeatPassword" name="repeatPassword" className="form__field" placeholder="Repeat your password" />
                                 </div>
                             </div>
 

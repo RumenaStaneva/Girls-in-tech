@@ -35,38 +35,6 @@ const Jobs = () => {
                                 </ul>
                             </div>
                         </div>
-
-                        <div className="position">
-                            <h3 className="position__title">{offer.jobTitle}</h3>
-
-                            <div className="position__entry">
-                                <p>Requirements:</p>
-                                <ul>
-                                    {offer.requirements.split('-').map(require => {
-                                        return (
-                                            <li> - {require}</li>
-
-                                        )
-                                    })
-                                    }
-                                    {/* <li>- Proven work experience as a Content Editor, Web Editor or similar role</li>
-
-                                    <li>- Portfolio of published work</li>
-
-                                    <li>- Excellent writing and editing skills in English</li>
-
-                                    <li>- Attention to detail</li>
-
-                                    <li>- Hands-on experience with Content Management Systems (e.g. WordPress)</li>
-
-                                    <li>- Familiarity with SEO and keyword research</li>
-
-                                    <li>- Team spirit</li>
-
-                                    <li>- BSc in Marketing, Journalism, Communications or related field</li> */}
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
 

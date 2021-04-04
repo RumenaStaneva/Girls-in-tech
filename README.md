@@ -1,15 +1,17 @@
-# Getting Started with Create React App
+# Girls in tech
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About The Project
 
-## Available Scripts
+Blog community supporting all the girls in tech. You can read our posts, learn about our events or join our team!
 
-In the project directory, you can run:
+### Instalation
 
-### `npm start`
+1️. Download the app or clone the repo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`git clone https://github.com/Iskren1990/event-hosting.git`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Note: Port 5000 should not be in use.
+
+2️. In the root folder run:
+
+`npm run start`
