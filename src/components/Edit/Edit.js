@@ -1,25 +1,32 @@
 import './Edit.css'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { db } from '../../services/firebase'
 
 const Edit = ({ match, history }) => {
     const id = match.params.id;
+    const [title, setTitle] = useState('')
+    const [content, setContent] = useState("")
+    const [imgUrl, setImgUrl] = useState("")
     const [newTitle, setNewTitle] = useState('')
     const [newContent, setNewContent] = useState("")
     const [newImgUrl, setNewImgUrl] = useState("")
 
+    useEffect(() => {
 
-    // useEffect(() => {
+        db.collection('blogs')
+            .doc(id)
+            .get()
+            .then((res) => {
+                //console.log(res.data());
+                let response = res.data();
+                setTitle(response.title)
+                setContent(response.content)
+                setImgUrl(response.imgUrl)
 
-    //     db.collection('blogs')
-    //         .doc(id)
-    //         .get()
-    //         .then((res) => {
-    //             console.log(res.data())
+            })
 
-    //         })
+    }, [])
 
-    // }, [])
 
     const onEdit = (e) => {
         e.preventDefault()
@@ -61,21 +68,21 @@ const Edit = ({ match, history }) => {
                                 <div className="form__row">
                                     <label className="form__label">Title
 
-                                    <input type="title" id="title" name="title" className="form__field" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
+                                    <input type="title" id="title" name="title" className="form__field" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} placeholder={title} />
                                     </label>
                                 </div>
 
                                 <div className="form__row">
                                     <label className="form__label">Content
 
-                                    <input type="content" id="content" name="content" className="form__field" value={newContent} onChange={(e) => setNewContent(e.target.value)} />
+                                    <input type="content" id="content" name="content" className="form__field" value={newContent} placeholder={content} onChange={(e) => setNewContent(e.target.value)} />
                                     </label>
                                 </div>
 
                                 <div className="form__row">
                                     <label className="form__label">Image URL
 
-                                    <input type="content" id="imgUrl" name="imgUrl" className="form__field" value={newImgUrl} onChange={(e) => setNewImgUrl(e.target.value)} />
+                                    <input type="content" id="imgUrl" name="imgUrl" className="form__field" value={newImgUrl} placeholder={imgUrl} onChange={(e) => setNewImgUrl(e.target.value)} />
                                     </label>
                                 </div>
                             </div>

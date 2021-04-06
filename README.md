@@ -10,7 +10,7 @@ Blog community supporting all the girls in tech. You can read our posts, learn a
 
 `git clone https://github.com/RumenaStaneva/Girls-in-tech.git`
 
-Note: Port 5000 should not be in use.
+Note: Port 3030 should not be in use.
 
 2️. In the root folder run:
 
