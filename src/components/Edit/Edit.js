@@ -30,8 +30,6 @@ const Edit = ({ match, history }) => {
 
     const onEdit = (e) => {
         e.preventDefault()
-        let today = new Date().toISOString().slice(0, 10)
-        console.log(newTitle);
         db.collection('blogs')
             .doc(id)
             .get()
@@ -43,7 +41,6 @@ const Edit = ({ match, history }) => {
                         title: newTitle,
                         content: newContent,
                         imgUrl: newImgUrl,
-                        createdAt: today
                     })
             })
             .then((blog) => {

@@ -25,7 +25,7 @@ const Jobs = () => {
                                 <p>Requirements:</p>
 
                                 <ul>
-                                    {offer.requirements.split(' -').map(require => {
+                                    {offer.requirements.split('-').map(require => {
                                         return (
                                             <li> - {require}</li>
 
