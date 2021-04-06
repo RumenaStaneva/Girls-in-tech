@@ -1,56 +1,48 @@
 import '../Authentication.css';
-import React, { useCallback, useContext, useState } from "react";
-import { withRouter, Redirect } from "react-router";
-import { AuthContext } from "./../../../services/Auth";
-import { app } from './../../../services/firebase'
+import { auth } from '../../../services/firebase'
 
 
-const Login = ({ }) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-    const signInWithEmailAndPasswordHandler =
-        (event, email, password) => {
-            event.preventDefault();
-        };
+const Login = ({ history }) => {
+    const onLoginSubmit = (e) => {
+        e.preventDefault();
 
-    const onChangeHandler = (event) => {
-        const { name, value } = event.currentTarget;
+        const username = e.target.username.value;
+        const password = e.target.password.value;
 
-        if (name === 'email') {
-            setEmail(value);
-        }
-        else if (name === 'passord') {
-            setPassword(value);
-        }
+        console.log(username, password);
+
+        auth.signInWithEmailAndPassword(username, password)
+            .then((userCredential) => {
+                history.push('/');
+            });
     }
+
+
     return (
         <>
             <section className="section-form">
                 <div className="shell">
                     <div className="section__inner">
                         <div className="form-authentication">
-                            <form >
+                            <form onSubmit={onLoginSubmit}>
                                 <div className="form__head">
                                     <h2 className="form__title">Login</h2>
                                 </div>
 
                                 <div className="form__body">
                                     <div className="form__row">
-                                        <label for="email" className="form__label">Email</label>
+                                        <label className="form__label">Email
                                         <input type="email" id="email" name="email" className="form__field"
-                                            placeholder="E.g: faruq123@gmail.com"
-                                            value={email}
-                                            onChange={(event) => onChangeHandler(event)}></input>
+                                                placeholder="E.g: faruq123@gmail.com"></input>
+                                        </label>
                                     </div>
 
                                     <div className="form__row">
-                                        <label for="password" className="form__label">Password</label>
+                                        <label className="form__label">Password
 
                                         <input type="password" id="password" name="password" className="form__field"
-                                            value={password}
-                                            placeholder="Your Password"
-                                            onChange={(event) => onChangeHandler(event)}></input>
+                                                placeholder="Your Password"></input>
+                                        </label>
                                     </div>
                                 </div>
 
@@ -65,7 +57,6 @@ const Login = ({ }) => {
         </>
 
     );
-
-}
+};
 
 export default Login;

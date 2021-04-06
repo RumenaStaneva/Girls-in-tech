@@ -1,0 +1,102 @@
+.positions .position+.position {
+    margin-top: 94px;
+}
+
+.position .position__title {
+    font-size: 37px;
+    line-height: 1.21;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    margin-bottom: 36px;
+}
+
+.position .position__entry {
+    font-size: 21px;
+    line-height: 1.24;
+}
+
+.section-default {
+    padding: 81px 0 44px;
+}
+
+.section-default .section__inner {
+    background-color: #fff;
+    padding: 38px 51px;
+}
+
+.section-default .section__title {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.22;
+    margin-bottom: 33px;
+}
+
+.section-default .section__head {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 87px;
+}
+
+.section-default .section__body {
+    margin-bottom: 193px;
+}
+
+.challenges .challenges__item+.challenges__item {
+    margin-top: 45px;
+}
+
+.challenge {
+    background-color: #FFECF2;
+    max-width: 888px;
+    margin: auto;
+    padding: 31px;
+    border-radius: 10px;
+}
+
+.challenge .challenge__title,
+.challenge .challenge__place,
+.challenge .challenge__time,
+.challenge .challenge__description {
+    font-size: 28px;
+    line-height: 1.21;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.challenge .challenge__actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.challenge .challenge__btn {
+    font-size: 28px;
+    line-height: 1.21;
+    background-color: #E9F3E8;
+    border: 3px solid #656565;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 287px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    transition: background-color .3s;
+}
+
+.challenge .challenge__btn:hover {
+    background-color: #cbebc7;
+}
+
+.action .action__image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.action .action__entry {
+    font-size: 37px;
+    line-height: 1.21;
+    text-align: center;
+}
+
+.action .action__entry a:hover {
+    text-decoration: none;
+}

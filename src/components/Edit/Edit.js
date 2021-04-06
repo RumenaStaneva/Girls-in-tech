@@ -1,22 +1,49 @@
-import './CreateBlog.css'
+import './Edit.css'
 import React, { useState } from 'react';
 import { db } from '../../services/firebase'
 
-
-const CreateBlog = ({ history }) => {
-    const [newTitle, setNewTitle] = useState("")
+const Edit = ({ match, history }) => {
+    const id = match.params.id;
+    const [newTitle, setNewTitle] = useState('')
     const [newContent, setNewContent] = useState("")
     const [newImgUrl, setNewImgUrl] = useState("")
 
-    const onCreate = (e) => {
+
+    // useEffect(() => {
+
+    //     db.collection('blogs')
+    //         .doc(id)
+    //         .get()
+    //         .then((res) => {
+    //             console.log(res.data())
+
+    //         })
+
+    // }, [])
+
+    const onEdit = (e) => {
         e.preventDefault()
         let today = new Date().toISOString().slice(0, 10)
         console.log(newTitle);
-        db.collection('blogs').add({ title: newTitle, content: newContent, imgUrl: newImgUrl, createdAt: today, author: 'rumba-pumba' })
-        alert('Successfully created post!')
-        //not working
-        e.target.reset();
-        history.push('/')
+        db.collection('blogs')
+            .doc(id)
+            .get()
+            .then((res) => {
+                return db.collection('blogs')
+                    .doc(id)
+                    .set({
+                        ...res.data(),
+                        title: newTitle,
+                        content: newContent,
+                        imgUrl: newImgUrl,
+                        createdAt: today
+                    })
+            })
+            .then((blog) => {
+                alert(`Successfully edited post!`)
+                history.push('/')
+            }).catch(e => console.log(e))
+
 
     }
 
@@ -25,9 +52,9 @@ const CreateBlog = ({ history }) => {
             <div className="shell">
                 <div className="section__inner">
                     <div className="form-blog">
-                        <form onSubmit={e => { onCreate(e) }}>
+                        <form onSubmit={e => { onEdit(e) }}>
                             <div className="form__head">
-                                <h2 className="form__title">Create you post</h2>
+                                <h2 className="form__title">Edit your post</h2>
                             </div>
 
                             <div className="form__body">
@@ -66,4 +93,4 @@ const CreateBlog = ({ history }) => {
 };
 
 
-export default CreateBlog;
+export default Edit;

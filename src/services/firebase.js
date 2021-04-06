@@ -4,14 +4,14 @@ import 'firebase/auth'
 
 // Your web app's Firebase configuration
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyAbb2V8OJgd4cQpNd9VM-hK0rj2f6rcDOA",
-  authDomain: "girls-in-tech-c90fc.firebaseapp.com",
-  projectId: "girls-in-tech-c90fc",
-  storageBucket: "girls-in-tech-c90fc.appspot.com",
-  messagingSenderId: "84468468013",
-  appId: "1:84468468013:web:81e74ad49e65e2fc0c2ba4"
+  apiKey: "AIzaSyCmDBOsOn6zjxV2FQSTjSF7ohX_GY37V0k",
+  authDomain: "girls-in-tech-b2067.firebaseapp.com",
+  projectId: "girls-in-tech-b2067",
+  storageBucket: "girls-in-tech-b2067.appspot.com",
+  messagingSenderId: "681330250887",
+  appId: "1:681330250887:web:3d172153b53b38a2211422"
 });
 
 const db = firebase.firestore();
-
-export { db, app };
+const auth = firebase.auth();
+export { db, app, auth };

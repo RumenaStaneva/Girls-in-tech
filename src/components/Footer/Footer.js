@@ -4,8 +4,6 @@ import fbLogo from '../../static/facebook.png'
 import igLogo from '../../static/instagram.png'
 import { Link } from 'react-router-dom'
 
-import { Children } from 'react'
-
 const Footer = () => {
     return (
         <footer className="footer">
@@ -21,7 +19,7 @@ const Footer = () => {
                         <div className="footer__nav">
                             <ul>
                                 <li>
-                                    <Link to="/">About</Link>
+                                    <Link to="/about">About</Link>
                                 </li>
 
                                 <li>

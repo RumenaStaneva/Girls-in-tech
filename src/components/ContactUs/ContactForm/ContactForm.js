@@ -26,23 +26,27 @@ const ContactForm = () => {
 
                     <div className="form__body">
                         <div className="form__row">
-                            <label for="name" className="form__label">Name</label>
+                            <label className="form__label">Name
                             <input type="name" id="name" name="name" className="form__field" />
+                            </label>
                         </div>
                         <div className="form__row">
-                            <label for="email" className="form__label">Email</label>
+                            <label className="form__label">Email
                             <input type="email" id="email" name="email" className="form__field" />
+                            </label>
                         </div>
 
                         <div className="form__row">
-                            <label for="subject" className="form__label">Subject</label>
+                            <label className="form__label">Subject
                             <input type="subject" id="subject" name="subject" className="form__field" />
+                            </label>
                         </div>
 
                         <div className="form__row">
-                            <label for="message" className="form__label">Message</label>
+                            <label className="form__label">Message
 
                             <textarea name="message" id="message" className="form__field form__textarea"></textarea>
+                            </label>
                         </div>
                     </div>
 

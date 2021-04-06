@@ -1,0 +1,111 @@
+.section-about {
+    padding: 84px 0;
+}
+
+.section-about .section__head {
+    margin-bottom: 104px;
+}
+
+.section-about .section__inner {
+    background-color: #fff;
+    padding: 99px 0;
+}
+
+.section-about .section__title {
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.section-about .section__title h2 {
+    font-weight: 500;
+    font-size: 51px;
+    line-height: 1.21;
+    margin-bottom: 51px;
+}
+
+.section-about .section__image {
+    border-bottom: 1px solid #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.section-about .section__image img {
+    text-align: center;
+    width: 405px;
+    margin-top: -2px;
+}
+
+.section-about .section__body {
+    margin-bottom: 124px;
+}
+
+.section-about .section__actions {
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 33px 0;
+}
+
+.section-about .section__actions p {
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 1.23;
+}
+
+.section-about .section__actions a {
+    font-weight: 500;
+}
+
+.section-about .section__actions a:hover {
+    text-decoration: none;
+}
+
+.message {
+    padding: 72px 0;
+    text-align: center;
+    position: relative;
+}
+
+.message .message__title {
+    font-weight: 500;
+    font-size: 37px;
+    line-height: 1.22;
+}
+
+.message .message__entry {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 1.24;
+}
+
+.message .message__content {
+    position: relative;
+    z-index: 2;
+    padding: 58px 71px 74px;
+    background-color: #FFECEC;
+    max-width: 620px;
+    width: 100%;
+    margin-left: 70px;
+}
+
+.message .message__image {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 457px;
+}
+
+.message--reversed .message__image {
+    left: 0;
+    right: auto;
+}
+
+.message--reversed .message__content {
+    margin-left: auto;
+}

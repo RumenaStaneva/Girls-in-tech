@@ -1,6 +1,5 @@
 
 import React, { useCallback } from "react";
-import { withRouter } from "react-router";
 import '../Authentication.css'
 import { app } from './../../../services/firebase'
 
@@ -49,27 +48,27 @@ const Register = ({ history }) => {
 
                             <div className="form__body">
                                 <div className="form__row">
-                                    <label for="name" className="form__label">Name</label>
+                                    <label className="form__label">Name
 
                                     <input type="name" id="name" name="name" className="form__field"
-                                        placeholder="E.g: Pesho Petrov" />
+                                            placeholder="E.g: Pesho Petrov" /></label>
                                 </div>
                                 <div className="form__row">
-                                    <label for="email" className="form__label">Email</label>
+                                    <label className="form__label">Email
 
-                                    <input type="email" id="email" name="email" className="form__field" placeholder="E.g: pesho123@gmail.com" />
-                                </div>
-
-                                <div className="form__row">
-                                    <label for="password" className="form__label">Password</label>
-
-                                    <input type="password" id="password" name="password" className="form__field" placeholder="Your password" />
+                                    <input type="email" id="email" name="email" className="form__field" placeholder="E.g: pesho123@gmail.com" /></label>
                                 </div>
 
                                 <div className="form__row">
-                                    <label for="repeatPassword" className="form__label">Repeat Password</label>
+                                    <label className="form__label">Password
 
-                                    <input type="password" id="repeatPassword" name="repeatPassword" className="form__field" placeholder="Repeat your password" />
+                                    <input type="password" id="password" name="password" className="form__field" placeholder="Your password" /></label>
+                                </div>
+
+                                <div className="form__row">
+                                    <label className="form__label">Repeat Password
+
+                                    <input type="password" id="repeatPassword" name="repeatPassword" className="form__field" placeholder="Repeat your password" /></label>
                                 </div>
                             </div>
 
