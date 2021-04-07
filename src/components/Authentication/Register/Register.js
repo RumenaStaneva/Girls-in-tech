@@ -1,4 +1,3 @@
-
 import React, { useCallback } from "react";
 import '../Authentication.css'
 import { app } from './../../../services/firebase'
@@ -47,12 +46,6 @@ const Register = ({ history }) => {
                             </div>
 
                             <div className="form__body">
-                                <div className="form__row">
-                                    <label className="form__label">Name
-
-                                    <input type="name" id="name" name="name" className="form__field"
-                                            placeholder="E.g: Pesho Petrov" /></label>
-                                </div>
                                 <div className="form__row">
                                     <label className="form__label">Email
 

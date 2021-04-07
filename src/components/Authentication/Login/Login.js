@@ -1,22 +1,28 @@
 import '../Authentication.css';
 import { auth } from '../../../services/firebase'
+//import LoginValidator from "../../../services/LoginValidator.js";
 
 
 const Login = ({ history }) => {
     const onLoginSubmit = (e) => {
         e.preventDefault();
 
-        const username = e.target.username.value;
+        const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log(username, password);
-
-        auth.signInWithEmailAndPassword(username, password)
+        auth.signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
+                console.log(userCredential.user.uid);
+                // <LoginValidator userCredential={userCredential.user.uid} />
+                let username = email.split('@').shift();
+                username = username[0].charAt(0).toUpperCase() + username.slice(1);
+
+                console.log(username);
+                localStorage.setItem('uid', userCredential.user.uid)
+                localStorage.setItem('username', username)
                 history.push('/');
             });
     }
-
 
     return (
         <>
@@ -33,7 +39,7 @@ const Login = ({ history }) => {
                                     <div className="form__row">
                                         <label className="form__label">Email
                                         <input type="email" id="email" name="email" className="form__field"
-                                                placeholder="E.g: faruq123@gmail.com"></input>
+                                                placeholder="E.g: peshopetrov@gmail.bg"></input>
                                         </label>
                                     </div>
 

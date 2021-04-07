@@ -17,6 +17,17 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
+
+
 const db = firebase.firestore();
 const auth = firebase.auth();
+
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    console.log(`logged in - `);
+    console.log(user);
+  } else {
+    console.log(`logged out - `);
+  }
+})
 export { db, app, auth };

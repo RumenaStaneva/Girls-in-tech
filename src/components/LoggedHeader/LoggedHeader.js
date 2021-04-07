@@ -1,7 +1,6 @@
 import logo from '../../static/logo.png'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { app } from '../../services/firebase'
 import './LoggedHeader.css'
 
 
@@ -22,7 +21,10 @@ const LoggedHeader = () => {
                             <NavLink to="/" exact activeClassName="selected">Archive</NavLink>
                         </li>
                         <li>
-                            <Link onClick={() => app.auth().signOut()}>Logout</Link>
+                            <NavLink to="/profile" exact activeClassName="selected">Profile</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/logout" >Logout</NavLink>
                         </li>
 
 

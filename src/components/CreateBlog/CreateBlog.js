@@ -11,8 +11,9 @@ const CreateBlog = ({ history }) => {
     const onCreate = (e) => {
         e.preventDefault()
         let today = new Date().toISOString().slice(0, 10)
-        console.log(newTitle);
-        db.collection('blogs').add({ title: newTitle, content: newContent, imgUrl: newImgUrl, createdAt: today, author: 'rumba-pumba' })
+        const username = localStorage.getItem('username');
+        const uid = localStorage.getItem('uid');
+        db.collection('blogs').add({ title: newTitle, content: newContent, imgUrl: newImgUrl, createdAt: today, author: username, authorId: uid })
         alert('Successfully created post!')
         //not working
         e.target.reset();

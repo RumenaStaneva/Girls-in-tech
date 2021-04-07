@@ -11,7 +11,8 @@ function Article() {
         const data = await db.collection('blogs').get();
         setBlogs(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
     });
-    useEffect(fetchData, [])
+    useEffect(fetchData, []);
+
 
     return (
 
@@ -20,10 +21,10 @@ function Article() {
 
                 blogs.map(blog => {
                     console.log(`hello`)
-                    //console.log(blog);
+                    //console.log(blog.id);
                     return (
-                        <div className="article__inner">
-                            <div className="article__content">
+                        <div className="article__inner" key={blog.id}>
+                            <div className="article__content" >
                                 <div className="article__head">
                                     <a href="/" className="article__logo">
                                         <img src={logo} alt="Logo" />

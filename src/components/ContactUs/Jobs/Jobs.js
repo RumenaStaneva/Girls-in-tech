@@ -14,11 +14,13 @@ const Jobs = () => {
     }, [])
 
     return (
+
         offers.map(offer => {
+
             return (
-                <div className="section__body">
+                <div className="section__body" key={offer.id}>
                     <div className="positions">
-                        <div className="position">
+                        <div className="position" >
                             <h3 className="position__title">{offer.jobTitle}</h3>
 
                             <div className="position__entry">

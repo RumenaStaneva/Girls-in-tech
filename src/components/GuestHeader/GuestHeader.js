@@ -1,8 +1,6 @@
 import logo from '../../static/logo.png'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-
-
 import './GuestHeader.css'
 
 
@@ -20,21 +18,21 @@ const GuestHeader = () => {
 
                 <nav className="nav">
                     <ul>
-                        <li>
+                        {/* <li>
                             <NavLink to="/" exact activeClassName="selected">Archive</NavLink>
-                        </li>
+                        </li> */}
                         <li>
                             <NavLink to="/login" exact activeClassName="selected">Login</NavLink>
                         </li>
                         <li>
                             <NavLink to="/register" exact activeClassName="selected">Register</NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <NavLink to="/events" exact activeClassName="selected">Events</NavLink>
                         </li>
-                        {/* <li>
-                            <button onClick={() => app.auth().signOut()}>Logout</button>
-                        </li>*/}
+                        <li>
+                            <NavLink to="/logout">Logout</NavLink>
+                        </li> */}
 
 
                     </ul>
