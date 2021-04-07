@@ -7,9 +7,7 @@ const Edit = ({ match, history }) => {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState("")
     const [imgUrl, setImgUrl] = useState("")
-    const [newTitle, setNewTitle] = useState('')
-    const [newContent, setNewContent] = useState("")
-    const [newImgUrl, setNewImgUrl] = useState("")
+
 
     useEffect(() => {
 
@@ -17,7 +15,7 @@ const Edit = ({ match, history }) => {
             .doc(id)
             .get()
             .then((res) => {
-                //console.log(res.data());
+
                 let response = res.data();
                 setTitle(response.title)
                 setContent(response.content)
@@ -38,9 +36,9 @@ const Edit = ({ match, history }) => {
                     .doc(id)
                     .set({
                         ...res.data(),
-                        title: newTitle,
-                        content: newContent,
-                        imgUrl: newImgUrl,
+                        title: title,
+                        content: content,
+                        imgUrl: imgUrl,
                     })
             })
             .then((blog) => {
@@ -65,21 +63,21 @@ const Edit = ({ match, history }) => {
                                 <div className="form__row">
                                     <label className="form__label">Title
 
-                                    <input type="title" id="title" name="title" className="form__field" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} placeholder={title} />
+                                    <input type="title" id="title" name="title" className="form__field" value={title} onChange={(e) => setTitle(e.target.value)} placeholder={title} />
                                     </label>
                                 </div>
 
                                 <div className="form__row">
                                     <label className="form__label">Content
 
-                                    <input type="content" id="content" name="content" className="form__field" value={newContent} placeholder={content} onChange={(e) => setNewContent(e.target.value)} />
+                                    <input type="content" id="content" name="content" className="form__field" value={content} placeholder={content} onChange={(e) => setContent(e.target.value)} />
                                     </label>
                                 </div>
 
                                 <div className="form__row">
                                     <label className="form__label">Image URL
 
-                                    <input type="content" id="imgUrl" name="imgUrl" className="form__field" value={newImgUrl} placeholder={imgUrl} onChange={(e) => setNewImgUrl(e.target.value)} />
+                                    <input type="content" id="imgUrl" name="imgUrl" className="form__field" value={imgUrl} placeholder={imgUrl} onChange={(e) => setImgUrl(e.target.value)} />
                                     </label>
                                 </div>
                             </div>

@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 
 
 
-const BlogActions = ({ blog }) => {
+const BlogActions = ({ blog, onBlogDelete }) => {
 
-    const onDelete = () => {
-        db.collection('blogs').doc(blog.id).delete()
+    const onDelete = async () => {
+        await db.collection('blogs').doc(blog.id).delete();
+        onBlogDelete();
         alert('Successfully deleted!');
 
     }

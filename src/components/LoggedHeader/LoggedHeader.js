@@ -2,9 +2,7 @@ import logo from '../../static/logo.png'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { app } from '../../services/firebase'
-
 import './LoggedHeader.css'
-import { useContext } from 'react'
 
 
 const LoggedHeader = () => {

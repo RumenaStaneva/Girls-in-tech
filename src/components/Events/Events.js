@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+// import { Link } from "react-router-dom";
 import { db } from '../../services/firebase'
 import Calendar from './Calendar'
 import './Events.css'
@@ -38,9 +39,9 @@ const Events = () => {
                                                     <p>{event.description}</p>
                                                 </div>
 
-                                                <div className="challenge__actions">
-                                                    <a href="#" className="challenge__btn">Going</a>
-                                                </div>
+                                                {/* <div className="challenge__actions">
+                                                    <Link to="/" className="challenge__btn">Going</Link>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </div>

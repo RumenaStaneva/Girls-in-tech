@@ -1,5 +1,5 @@
 import logo from '../../../static/logo.png'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import BlogActions from './BlogActions'
 import { db } from '../../../services/firebase'
 import './Article.css'
@@ -7,13 +7,11 @@ import './Article.css'
 
 function Article() {
     const [blogs, setBlogs] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await db.collection('blogs').get();
-            setBlogs(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
-        }
-        fetchData()
-    }, [])
+    const fetchData = useCallback(async () => {
+        const data = await db.collection('blogs').get();
+        setBlogs(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+    });
+    useEffect(fetchData, [])
 
     return (
 
@@ -44,7 +42,7 @@ function Article() {
                                     <div className="article__entry">
                                         <p>{blog.content}</p>
                                     </div>
-                                    <BlogActions blog={blog} />
+                                    <BlogActions blog={blog} onBlogDelete={fetchData} />
                                 </div>
                             </div>
 

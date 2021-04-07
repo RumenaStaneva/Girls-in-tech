@@ -64,3 +64,8 @@
     display: flex;
     justify-content: center;
 }
+
+label {
+    display: flex;
+    position: relative;
+}

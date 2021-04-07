@@ -54,7 +54,7 @@ const ContactUs = () => {
                                 </div>
 
                                 <div className="section__map">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.171253627713!2d27.854923715712893!3d43.22686898791122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a454a5dc7cbd57%3A0x98f725585a50081e!2sBusiness%20Park%20Varna%2C%20Building%20B8!5e0!3m2!1sen!2sbg!4v1616344122460!5m2!1sen!2sbg" width="519" height="275" allowFullScreen="" loading="lazy"></iframe>
+                                    <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.171253627713!2d27.854923715712893!3d43.22686898791122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a454a5dc7cbd57%3A0x98f725585a50081e!2sBusiness%20Park%20Varna%2C%20Building%20B8!5e0!3m2!1sen!2sbg!4v1616344122460!5m2!1sen!2sbg" width="519" height="275" allowFullScreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
                             <ContactForm />

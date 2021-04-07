@@ -1,4 +1,4 @@
-import LoggedHeader from './components/LoggedHeader'
+//import LoggedHeader from './components/LoggedHeader'
 import GuestHeader from './components/GuestHeader'
 import Footer from './components/Footer';
 import Main from './components/Main';
@@ -12,13 +12,12 @@ import Edit from './components/Edit';
 import Register from './components/Authentication/Register';
 //import { AuthProvider } from './services/Auth'
 import React from 'react'
-import { Route, Link, Switch, Router } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import { auth } from "./services/firebase";
 import './App.css';
 //import PrivateRoute from './services/PrivateRoute';
 
 function App() {
-
-
   return (
 
     <div className="App">
