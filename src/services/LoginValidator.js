@@ -1,12 +1,9 @@
-import React from 'react';
+function LoginValidator({ props }) {
+    function console() {
+        console.log('from validator' + props);
 
-const LoginValidator = (userCredential) => {
-    console.log(userCredential);
-    return (
-        <div>
-
-        </div>
-    );
+    }
+    console()
 };
 
 export default LoginValidator;

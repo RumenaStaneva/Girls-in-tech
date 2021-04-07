@@ -9,9 +9,9 @@ const ContactForm = () => {
 
         emailjs.sendForm('service_apkknq4', 'template_gf97dx2', e.target, 'user_vV3byY1AmQeW5SbRaxZJT')
             .then((result) => {
-                console.log(result.text);
+                alert('Successfully send - ' + result.text);
             }, (error) => {
-                console.log(error.text);
+                alert(error.text);
             });
         e.target.reset()
     }

@@ -25,7 +25,6 @@ const auth = firebase.auth();
 auth.onAuthStateChanged((user) => {
   if (user) {
     console.log(`logged in - `);
-    console.log(user);
   } else {
     console.log(`logged out - `);
   }
