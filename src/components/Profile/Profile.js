@@ -18,7 +18,10 @@ const Profile = () => {
         fetchData()
     }, [])
 
-
+    let hasBlogs = false;
+    if (blogs.length > 0) {
+        hasBlogs = true;
+    }
 
     console.log(blogs);
     return (
@@ -35,47 +38,32 @@ const Profile = () => {
                                 <h2 className="posts__title">Your posts here</h2>
 
                                 <div className="posts__items">
-                                    {blogs.map(blog => {
-                                        return (
-                                            <div className="posts__item">
-                                                <div className="post">
-                                                    <a href="#" className="post__background" style={{ backgroundImage: `url(${blog.imgUrl})` }}></a>
+                                    {hasBlogs
+                                        ?
+                                        blogs.map(blog => {
+                                            return (
+                                                <div className="posts__item">
+                                                    <div className="post">
+                                                        <Link to={`/edit/${blog.id}`} className="post__background" style={{ backgroundImage: `url(${blog.imgUrl})` }}></Link>
 
-                                                    <h3 className="post__title">
-                                                        <Link to={`/edit/${blog.id}`}>
+                                                        <h3 className="post__title">
+
                                                             {blog.title}
-                                                        </Link></h3>
+                                                        </h3>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                        )
+                                            )
 
+                                        })
 
-
-
-
-
-
-
-
-
-                                        {/* <div className="section__item">
-                                    <div className="posts">
-                                        <h2 className="posts__title">You are going to:</h2>
-
-                                        <div className="posts__items">
-                                            <div className="posts__item">
-                                                <div className="post">
-                                                    <Link to="/" className="post__background" style={{ backgroundImage: `url(${cat})` }}></Link>
-
-                                                    <h3 className="post__title"><Link to="/">Event 1</Link></h3>
-                                                </div>
-                                            </div>
+                                        : <div className="missing-blogs">
+                                            <h1>No posts to show {`:(`}</h1>
+                                            <p>Write your first one </p><Link to="/createBlog"> here!</Link>
                                         </div>
-                                    </div>
-                                </div> */}
 
-                                    })}
+                                    }
+
                                 </div>
                             </div>
                         </div>
