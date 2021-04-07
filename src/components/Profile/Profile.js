@@ -33,9 +33,10 @@ const Profile = () => {
                         <div className="section__item">
                             <div className="posts">
                                 <h2 className="posts__title">Your posts here</h2>
-                                {blogs.map(blog => {
-                                    return (
-                                        <div className="posts__items">
+
+                                <div className="posts__items">
+                                    {blogs.map(blog => {
+                                        return (
                                             <div className="posts__item">
                                                 <div className="post">
                                                     <a href="#" className="post__background" style={{ backgroundImage: `url(${blog.imgUrl})` }}></a>
@@ -46,8 +47,8 @@ const Profile = () => {
                                                         </Link></h3>
                                                 </div>
                                             </div>
-                                        </div>
-                                    )
+
+                                        )
 
 
 
@@ -58,7 +59,7 @@ const Profile = () => {
 
 
 
-                                    {/* <div className="section__item">
+                                        {/* <div className="section__item">
                                     <div className="posts">
                                         <h2 className="posts__title">You are going to:</h2>
 
@@ -74,7 +75,8 @@ const Profile = () => {
                                     </div>
                                 </div> */}
 
-                                })}
+                                    })}
+                                </div>
                             </div>
                         </div>
 
