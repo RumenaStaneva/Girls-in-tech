@@ -1,0 +1,12 @@
+.error-message .error__entry {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.225;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.error-message .error__image {
+    text-align: center;
+}

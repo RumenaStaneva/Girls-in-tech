@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { Link } from 'react-router-dom'
 import '../Authentication.css'
 import { app } from './../../../services/firebase'
+import ErrorHandler from '../../ErrorHandler';
 
 
 
@@ -9,16 +10,12 @@ const Register = ({ history }) => {
     const handleRegister = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
-        console.log(email);
         const password = event.target.password.value;
         const repeatPassword = event.target.repeatPassword.value;
 
         if (password.length < 6) {
-            alert('Password should be at least 6 characters long!');
-            email = '';
-            password = '';
-            repeatPassword = '';
-            return;
+            //ErrorHandler('Password should be at least 6 characters long!');
+            alert('Password should be at least 6 characters long!')
         }
         if (password !== repeatPassword && password.length >= 6) {
             console.log(`error pass`);

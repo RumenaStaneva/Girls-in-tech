@@ -4,6 +4,7 @@ import womanCoding from '../../static/woman-coding.jpg'
 import womanCoding2 from '../../static/woman-coding-2.jpg'
 import coderGirl from '../../static/coder-girl.png'
 
+
 const About = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
     return (

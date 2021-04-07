@@ -1,0 +1,78 @@
+.posts .posts__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -30px;
+}
+
+.posts .posts__item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 30px;
+    margin-bottom: 56px;
+}
+
+.posts .posts__title {
+    text-align: center;
+    margin-bottom: 41px;
+    font-size: 35px;
+}
+
+/* ------------------------------------------------------------ *\
+	post
+\* ------------------------------------------------------------ */
+
+.post {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.post .post__background {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 100%;
+    display: block;
+    transition: transform .3s;
+}
+
+.post .post__background:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.40);
+    transition: background-color .3s;
+}
+
+.post:hover .post__background {
+    transform: scale(1.08);
+}
+
+.post:hover .post__background:before {
+    background-color: rgba(0, 0, 0, 0.20);
+}
+
+.post .post__title {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    z-index: 3;
+    display: inline-block;
+}
+
+.post .post__title a {
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+}
