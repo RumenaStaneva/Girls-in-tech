@@ -62,6 +62,15 @@ ol {
   list-style: none outside none;
 }
 
+label {
+  display: block;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
 .shell {
   max-width: 1161px;
   padding: 0 15px;
