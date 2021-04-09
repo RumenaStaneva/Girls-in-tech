@@ -15,3 +15,5 @@ Note: Port 3030 should not be in use.
 2️. In the root folder run:
 
 `npm run start`
+
+Or simply you can see it deployed here: `https://girls-in-tech-b2067.web.app/`
