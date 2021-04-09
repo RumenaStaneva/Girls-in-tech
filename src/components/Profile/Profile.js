@@ -10,20 +10,48 @@ const Profile = () => {
     const uid = localStorage.getItem('uid')
 
     const [blogs, setBlogs] = useState([]);
+    const [events, setEvents] = useState([]);
+    const [eventsGoing, setEventsGoing] = useState([]);
+    const [goesToEvent, setGoesToEvent] = useState(false);
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchBlogData = async () => {
             const data = await db.collection('blogs').get();
-            setBlogs(data.docs.map(doc => ({ ...doc.data(), id: doc.id })).filter(x => x.authorId == uid))
+
+            setBlogs(data.docs.map(doc => ({ ...doc.data(), id: doc.id })).filter(x => x.authorId == uid));
         }
-        fetchData()
+        fetchBlogData()
     }, [])
+
+    useEffect(() => {
+        const fetchEventsData = async () => {
+            const dataEvents = await db.collection('events').get();
+            //console.log(dataEvents.docs.data());
+            setEvents(dataEvents.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+        }
+        fetchEventsData()
+    }, [])
+
+
 
     let hasBlogs = false;
     if (blogs.length > 0) {
         hasBlogs = true;
     }
 
-    console.log(blogs);
+    console.log(events)
+
+
+    // events.map(ev => {
+    //     if (ev.peopleGoing.includes(uid)) {
+    //         setGoesToEvent(true);
+    //         setEventsGoing(ev)
+    //     } else {
+    //         setGoesToEvent(false);
+    //     }
+    //     console.log(eventsGoing);
+    // });
+
+
     return (
         <section className="section-default">
             <div className="shell">
@@ -65,6 +93,13 @@ const Profile = () => {
                                     }
 
                                 </div>
+
+                                {/* {goesToEvent
+                                    ?
+
+                                    <h1>{eventsGoing} </h1>
+
+                                    : <h1>Nothing to show</h1>} */}
                             </div>
                         </div>
 

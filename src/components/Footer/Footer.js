@@ -25,6 +25,9 @@ const Footer = () => {
                                 <li>
                                     <Link to="/contactUs">Contact Us</Link>
                                 </li>
+                                <li>
+                                    <Link to="/events">Events</Link>
+                                </li>
 
                             </ul>
                         </div>
