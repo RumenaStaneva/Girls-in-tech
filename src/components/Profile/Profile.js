@@ -5,6 +5,7 @@ import './Profile.css'
 
 
 const Profile = ({ isAuthenticated, history }) => {
+    console.log(isAuthenticated);
     if (!isAuthenticated) {
         history.push('/')
     }
