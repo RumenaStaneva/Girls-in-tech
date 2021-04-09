@@ -4,7 +4,10 @@ import Calendar from './Calendar'
 import './Events.css'
 
 
-const Events = () => {
+const Events = ({ isAuthenticated, history }) => {
+    if (!isAuthenticated) {
+        history.push('/')
+    }
     React.useEffect(() => { window.scrollTo(0, 0); }, []);
 
     const [events, setEvents] = useState([]);
