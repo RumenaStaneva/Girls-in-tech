@@ -1,23 +1,25 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import cat from '../../static/error-cat.jpg'
 import { db } from '../../services/firebase.js'
 import './Profile.css'
 
 
-const Profile = () => {
+const Profile = ({ isAuthenticated, history }) => {
+    if (!isAuthenticated) {
+        history.push('/')
+    }
     const username = localStorage.getItem('username')
     const uid = localStorage.getItem('uid')
 
     const [blogs, setBlogs] = useState([]);
     const [events, setEvents] = useState([]);
-    const [eventsGoing, setEventsGoing] = useState([]);
-    const [goesToEvent, setGoesToEvent] = useState(false);
+    //const [eventsGoing, setEventsGoing] = useState([]);
+    //const [goesToEvent, setGoesToEvent] = useState(false);
     useEffect(() => {
         const fetchBlogData = async () => {
             const data = await db.collection('blogs').get();
 
-            setBlogs(data.docs.map(doc => ({ ...doc.data(), id: doc.id })).filter(x => x.authorId == uid));
+            setBlogs(data.docs.map(doc => ({ ...doc.data(), id: doc.id })).filter(x => x.authorId === uid));
         }
         fetchBlogData()
     }, [])
@@ -25,7 +27,6 @@ const Profile = () => {
     useEffect(() => {
         const fetchEventsData = async () => {
             const dataEvents = await db.collection('events').get();
-            //console.log(dataEvents.docs.data());
             setEvents(dataEvents.docs.map(doc => ({ ...doc.data(), id: doc.id })));
         }
         fetchEventsData()

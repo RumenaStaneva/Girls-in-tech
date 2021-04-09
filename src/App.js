@@ -35,10 +35,10 @@ function App() {
         <Route path='/contactUs' component={ContactUs} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
-        <Route path='/createBlog' component={Createblog} />
+        <Route path='/createBlog' component={Createblog} isAuthenticated={Boolean(user)} />
         <Route path='/events' component={Events} />
-        <Route path='/edit/:id' component={Edit} />
-        <Route path='/profile' component={Profile} />
+        <Route path='/edit/:id' component={Edit} isAuthenticated={Boolean(user)} />
+        <Route path='/profile' component={Profile} isAuthenticated={Boolean(user)} />
         <Route path="/logout" render={props => {
           auth.signOut();
           localStorage.clear()

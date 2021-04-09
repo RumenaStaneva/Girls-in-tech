@@ -1,9 +1,13 @@
 import './CreateBlog.css'
 import React, { useState } from 'react';
 import { db } from '../../services/firebase'
+import { Redirect } from 'react-router';
 
 
-const CreateBlog = ({ history }) => {
+const CreateBlog = ({ isAuthenticated, history }) => {
+    if (!isAuthenticated) {
+        history.push('/')
+    }
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
     const [imgUrl, setImgUrl] = useState("")

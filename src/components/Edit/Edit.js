@@ -2,7 +2,10 @@ import './Edit.css'
 import React, { useState, useEffect } from 'react';
 import { db } from '../../services/firebase'
 
-const Edit = ({ match, history }) => {
+const Edit = ({ isAuthenticated, match, history }) => {
+    if (!isAuthenticated) {
+        history.push('/')
+    }
     const id = match.params.id;
     const [title, setTitle] = useState('')
     const [content, setContent] = useState("")
