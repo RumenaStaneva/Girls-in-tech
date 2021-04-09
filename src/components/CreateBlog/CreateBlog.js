@@ -1,7 +1,7 @@
 import './CreateBlog.css'
 import React, { useState } from 'react';
 import { db } from '../../services/firebase'
-import { Redirect } from 'react-router';
+
 
 
 const CreateBlog = ({ history }) => {
@@ -32,16 +32,16 @@ const CreateBlog = ({ history }) => {
             alert('Please provide a valid image url to your post! The valid formats for img url has to start with http/https and end with .jpg/.png!');
             return;
         }
-        try {
-            db.collection('blogs').add({ title: title, content: content, imgUrl: imgUrl, createdAt: today, author: username, authorId: uid })
-            alert('Successfully created post!')
-            //not working
-            e.target.reset();
-            history.push('/')
-        }
-        catch (err) {
-            console.log(err.message);
-        }
+
+        db.collection('blogs').add({ title: title, content: content, imgUrl: imgUrl, createdAt: today, author: username, authorId: uid })
+            .then(blog => {
+                alert('Successfully created post!')
+                history.push('/');
+            }).catch(err => {
+                alert(err.message)
+            })
+
+
 
 
 

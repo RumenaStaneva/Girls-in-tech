@@ -17,3 +17,11 @@ Note: Port 3030 should not be in use.
 `npm run start`
 
 Or simply you can see it deployed here: `https://girls-in-tech-b2067.web.app/`
+
+### What you can do in our page:
+1. Login or register to see what we got
+2. See all of our blogs 
+3. Create a blog 
+4. Be part of our team and see our current open positions
+5. See all our upcoming events ans subscribe for them
+6. Simply have fun :)

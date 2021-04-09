@@ -35,7 +35,7 @@ function App() {
         <Route path='/contactUs' component={ContactUs} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
-        <Createblog path='/createBlog' isAuthenticated={Boolean(user)} />
+        <Route path='/createBlog' component={Createblog} />
         <Events path='/events' isAuthenticated={Boolean(user)} />
         <Route path='/edit/:id' component={Edit} />
         <Profile path='/profile' isAuthenticated={Boolean(user)} />
