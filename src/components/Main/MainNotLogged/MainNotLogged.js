@@ -1,5 +1,5 @@
 import React from 'react';
-import logo2 from "../../static/logo-2.png";
+import logo2 from "../../../static/logo-2.png";
 import { Link } from "react-router-dom";
 
 const MainNotLogged = () => {

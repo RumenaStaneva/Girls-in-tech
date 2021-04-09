@@ -21,6 +21,10 @@ const Login = ({ history }) => {
                 localStorage.setItem('uid', userCredential.user.uid)
                 localStorage.setItem('username', username)
                 history.push('/');
+            })
+            .catch(err => {
+                alert(err.message);
+                return;
             });
     }
 

@@ -1,5 +1,4 @@
-import LoggedHeader from './components/LoggedHeader'
-import GuestHeader from './components/GuestHeader'
+import Header from './components/Header'
 import Footer from './components/Footer';
 import Main from './components/Main';
 import Error from './components/Error';
@@ -9,27 +8,29 @@ import ContactUs from './components/ContactUs';
 import Events from './components/Events';
 import About from './components/About';
 import Edit from './components/Edit';
-import MainNotLogged from './components/MainNotLogged';
 import Profile from './components/Profile';
 import Register from './components/Authentication/Register';
 import { auth } from './services/firebase'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 
 
 function App() {
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    auth.onAuthStateChanged(setUser)
+  }, [])
+
   return (
 
     <div className="App">
-      <LoggedHeader />
-
+      <Header isAuthenticated={Boolean(user)} />
       <Switch>
-        <Route exact path="/" component={Main} ></Route>
-        <Route path="/guest" >
-          <GuestHeader />
-          <MainNotLogged />
-        </Route>
+        <Main exact path="/" isAuthenticated={Boolean(user)}></Main>
+
         <Route path='/about' component={About} />
         <Route path='/contactUs' component={ContactUs} />
         <Route path='/login' component={Login} />
@@ -41,7 +42,7 @@ function App() {
         <Route path="/logout" render={props => {
           auth.signOut();
           localStorage.clear()
-          return <Redirect to="/guest" />
+          return <Redirect to="/" />
         }} />
         <Route render={() => <Error />} />
       </Switch>

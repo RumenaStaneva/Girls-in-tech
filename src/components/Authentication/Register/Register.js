@@ -30,8 +30,8 @@ const Register = ({ history }) => {
             app
                 .auth()
                 .createUserWithEmailAndPassword(email, password)
-                .then(() => {
-                    alert('success')
+                .then((userCredential) => {
+                    alert('Sucessfull registration!')
                     history.push("/login");
                 })
                 .catch(err => {

@@ -1,7 +1,7 @@
-import logo from '../../../static/logo.png'
+import logo from '../../../../static/logo.png'
 import React, { useState, useEffect, useCallback } from 'react';
 import BlogActions from './BlogActions'
-import { db } from '../../../services/firebase'
+import { db } from '../../../../services/firebase'
 import './Article.css'
 
 

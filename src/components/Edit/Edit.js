@@ -27,7 +27,22 @@ const Edit = ({ match, history }) => {
 
 
     const onEdit = (e) => {
-        e.preventDefault()
+        const imgValidator = /(https?:\/\/.*\.(?:png|jpg))/i;
+        const validatedImg = imgValidator.test(imgUrl);
+        e.preventDefault();
+        if (title === '' && title <= 0) {
+            alert('Please write a title!');
+            return;
+        }
+
+        if (content === '' && content <= 1) {
+            alert('Please write a content to your post!');
+            return;
+        }
+        if (imgUrl === '' || !validatedImg) {
+            alert('Please provide a valid image url to your post! The valid formats for img url has to start with http/https and end with .jpg/.png!');
+            return;
+        }
         db.collection('blogs')
             .doc(id)
             .get()

@@ -22,11 +22,5 @@ if (!firebase.apps.length) {
 const db = firebase.firestore();
 const auth = firebase.auth();
 
-auth.onAuthStateChanged((user) => {
-  if (user) {
-    console.log(`logged in - `);
-  } else {
-    console.log(`logged out - `);
-  }
-})
+
 export { db, app, auth };

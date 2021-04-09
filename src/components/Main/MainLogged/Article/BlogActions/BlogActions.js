@@ -1,4 +1,4 @@
-import { db } from '../../../../services/firebase'
+import { db } from '../../../../../services/firebase'
 import { Link } from 'react-router-dom'
 
 
