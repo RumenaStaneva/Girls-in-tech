@@ -2,7 +2,6 @@
     display: inline-block;
     width: 83%;
     height: auto;
-    /* border:1px solid blue; */
     margin-bottom: 5%;
 }
 
@@ -16,7 +15,6 @@
 
 .main-container .posts {
     width: 100%;
-    /* border:1px solid red; */
     height: 45vh;
 }
 
@@ -25,12 +23,10 @@
 }
 
 .article {
-
     background-color: transparent;
 }
 
 .article .article__inner {
-
     display: flex;
     padding-bottom: 25px;
 }
@@ -46,7 +42,6 @@
 .article .article__image {
     max-width: 50%;
     flex: 0 0 50%;
-    height: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

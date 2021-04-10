@@ -30,7 +30,7 @@ const About = () => {
                                         <h3 className="message__title">Who are we?</h3>
 
                                         <div className="message__entry">
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                                            <p>We are a small community of women who works in different tech industries. We are all very passionate and hard-working.</p>
                                         </div>
                                     </div>
 
@@ -48,7 +48,7 @@ const About = () => {
                                     <h3 className="message__title">What we are fighting for?</h3>
 
                                     <div className="message__entry">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                                        <p>Our mission is gender equality in the tech sphere. We want to create an inclusive environment where females are welcomed, encouraged, and nurtured.</p>
                                     </div>
                                 </div>
 

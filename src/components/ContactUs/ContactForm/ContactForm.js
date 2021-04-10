@@ -27,25 +27,25 @@ const ContactForm = () => {
                     <div className="form__body">
                         <div className="form__row">
                             <label className="form__label">Name
-                            <input type="name" id="name" name="name" className="form__field" />
+                            <input placeholder="Pesho Petrov" type="name" id="name" name="name" className="form__field" />
                             </label>
                         </div>
                         <div className="form__row">
                             <label className="form__label">Email
-                            <input type="email" id="email" name="email" className="form__field" />
+                            <input placeholder="pesho123@gmail.com" type="email" id="email" name="email" className="form__field" />
                             </label>
                         </div>
 
                         <div className="form__row">
                             <label className="form__label">Subject
-                            <input type="subject" id="subject" name="subject" className="form__field" />
+                            <input placeholder="Applying for Event Manager position" type="subject" id="subject" name="subject" className="form__field" />
                             </label>
                         </div>
 
                         <div className="form__row">
                             <label className="form__label">Message
 
-                            <textarea name="message" id="message" className="form__field form__textarea"></textarea>
+                            <textarea placeholder="Why you are applying for this position" name="message" id="message" className="form__field form__textarea"></textarea>
                             </label>
                         </div>
                     </div>

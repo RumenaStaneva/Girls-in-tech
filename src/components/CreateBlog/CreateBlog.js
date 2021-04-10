@@ -68,7 +68,7 @@ const CreateBlog = ({ history }) => {
                                 <div className="form__row">
                                     <label className="form__label">Content
 
-                                    <input type="content" id="content" name="content" className="form__field" value={content} onChange={(e) => setContent(e.target.value)} />
+                                    <textarea type="content" id="content" name="content" className="form__field" value={content} onChange={(e) => setContent(e.target.value)} ></textarea>
                                     </label>
                                 </div>
 
