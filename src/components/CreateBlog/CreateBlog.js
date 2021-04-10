@@ -61,21 +61,21 @@ const CreateBlog = ({ history }) => {
                                 <div className="form__row">
                                     <label className="form__label">Title
 
-                                    <input type="title" id="title" name="title" className="form__field" value={title} onChange={(e) => setTitle(e.target.value)} />
+                                    <input placeholder="Your amazing title" type="title" id="title" name="title" className="form__field" value={title} onChange={(e) => setTitle(e.target.value)} />
                                     </label>
                                 </div>
 
                                 <div className="form__row">
                                     <label className="form__label">Content
 
-                                    <textarea type="content" id="content" name="content" className="form__field" value={content} onChange={(e) => setContent(e.target.value)} ></textarea>
+                                    <textarea placeholder="We can't wait to hear more about it..." type="content" id="content" name="content" className="form__field" value={content} onChange={(e) => setContent(e.target.value)} ></textarea>
                                     </label>
                                 </div>
 
                                 <div className="form__row">
                                     <label className="form__label">Image URL
 
-                                    <input type="content" id="imgUrl" name="imgUrl" className="form__field" value={imgUrl} onChange={(e) => setImgUrl(e.target.value)} />
+                                    <input placeholder="https://data.whicdn.com/images/208654333/original.jpg" type="content" id="imgUrl" name="imgUrl" className="form__field" value={imgUrl} onChange={(e) => setImgUrl(e.target.value)} />
                                     </label>
                                 </div>
                             </div>
