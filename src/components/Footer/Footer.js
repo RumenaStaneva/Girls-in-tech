@@ -35,15 +35,15 @@ const Footer = () => {
                         <div className="socials">
                             <ul>
                                 <li>
-                                    <Link to="/">
+                                    <a href="https://www.facebook.com/girlsintechbg" target="_blank">
                                         <img src={fbLogo} alt="Facebook" />
-                                    </Link>
+                                    </a>
                                 </li>
 
                                 <li>
-                                    <Link to="/">
+                                    <a href="https://www.instagram.com/girlsintechbg/" target="_blank">
                                         <img src={igLogo} alt="Instagram" />
-                                    </Link>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
